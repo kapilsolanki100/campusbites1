@@ -1,0 +1,45 @@
+Create a complete, responsive, and modern single-page website for "Prompt Minds Coaching Center" using HTML, CSS, and JavaScript — all code must be written in a single index.html file.
+
+Project Requirements:
+1. Use Firebase Firestore as the database.
+2. The website should have:
+   - A beautiful hero section with the name “Prompt Minds Coaching Center”, tagline “Empowering Minds Through AI and Learning”, and a background image.
+   - An Admission Form Section with the following input fields:
+     - Full Name
+     - Father’s Name
+     - Email ID
+     - Date of Birth
+     - Gender (Male/Female/Other)
+     - Course (Dropdown – AI, Web Development, Psychology, Freelancing, or Other)
+     - Address
+     - A “Submit Form” button that saves all data to Firebase Firestore.
+   - A success message like “ Your Admission Form Has Been Successfully Submitted!”
+
+3. At the bottom footer, add a small button labeled “Admin Login”.
+   - When clicked, it opens a password prompt (e.g., `Enter Admin Key:`).
+   - If the correct admin key is entered (for example: `promptminds2025`), then it shows the Admin Panel.
+
+4. Admin Panel Features:
+   - Display all submitted admission forms in a clean, tabular layout.
+   - Each row should show:
+     - Name, Email, Mobile, Course, and Date of Submission.
+   - Include a Delete button next to each entry to remove it from Firebase.
+   - Include a Download CSV” button to export all admission data as a CSV file.
+
+5. The design should look professional:
+   - Use light blue and white theme.
+   - Rounded corners, smooth hover effects, and good spacing.
+   - Mobile responsive layout.
+
+6. Use Firebase SDK (Firestore) directly in JavaScript (no external backend or framework).
+
+7. Make sure all Firebase configurations are clearly mentioned in a section like:
+   ```js
+   const firebaseConfig = {
+     apiKey: "YOUR_API_KEY",
+     authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+     projectId: "YOUR_PROJECT_ID",
+     storageBucket: "YOUR_PROJECT_ID.appspot.com",
+     messagingSenderId: "YOUR_SENDER_ID",
+     appId: "YOUR_APP_ID"
+   };
