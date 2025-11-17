@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>CampusBites Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container" style="padding-top:1.2rem">
+    <h2>Admin Dashboard</h2>
+    <section class="section">
+      <h3>Manage Menu</h3>
+      <div class="form-grid">
+        <input id="m-name" placeholder="Item name">
+        <input id="m-price" placeholder="Price" type="number">
+        <input id="m-img" placeholder="Image URL">
+        <select id="m-available"><option value="true">Available</option><option value="false">Not available</option></select>
+        <button id="save-item" class="btn primary">Add / Update</button>
+      </div>
+      <div id="menu-table" style="margin-top:.8rem"></div>
+    </section>
+
+    <section class="section" style="margin-top:1rem">
+      <h3>Orders</h3>
+      <div id="orders-table"></div>
+      <div style="margin-top:.6rem">
+        <button id="download-csv" class="btn">Download CSV</button>
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

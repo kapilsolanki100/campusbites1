@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CampusBites — College Canteen</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">CB</div>
+        <div class="brand-text"><h1>CampusBites</h1><p class="tag">Welcome to CampusBites, the digital solution for our college canteen. Order your favorite foods online and skip the queue!</p></div>
+      </div>
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#menu-section">Menu</a>
+        <a href="#contact">Contact</a>
+        <button id="open-cart" class="icon-btn"><i class="fa fa-shopping-cart"></i><span id="cart-count" class="cart-count">0</span></button>
+        <button id="admin-login" class="admin-btn">Admin Login</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-left">
+        <h2>CampusBites</h2>
+        <p class="hero-tag">Welcome to CampusBites, the digital solution for our college canteen. Order your favorite foods online and skip the queue!</p>
+        <div class="hero-cta">
+          <button id="order-now" class="btn primary">Order Now</button>
+          <button class="btn ghost" id="contact-btn">Contact</button>
+        </div>
+      </div>
+      <div class="hero-right"></div>
+    </section>
+
+    <section id="menu-section" class="container section">
+      <h3>Menu</h3>
+      <div id="menu-grid" class="grid">
+        <!-- menu items injected by JS -->
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h3>Contact & Get in Touch</h3>
+      <form id="contact-form" class="contact-form">
+        <input id="contact-name" placeholder="Your name" required>
+        <input id="contact-email" placeholder="Your email" type="email" required>
+        <textarea id="contact-msg" rows="4" placeholder="Message"></textarea>
+        <div><button type="button" class="btn primary" id="send-contact">Send</button></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Cart Panel -->
+  <div id="cart-panel" class="cart-panel" hidden>
+    <h4>Your Cart</h4>
+    <div id="cart-items"></div>
+    <div class="cart-footer">
+      <div>Total: ₹<span id="cart-total">0</span></div>
+      <div><button id="checkout" class="btn primary">Proceed to Checkout</button></div>
+    </div>
+  </div>
+
+  <!-- Modal root -->
+  <div id="modal-root"></div>
+
+  <!-- Chatbot -->
+  <div id="chatbot-toggle" title="Chat with assistant">💬</div>
+  <div id="chatbot-panel" hidden>
+    <div id="chat-log"></div>
+    <div class="chat-input">
+      <input id="chat-input" placeholder="Ask about menu, payment or admin...">
+      <button id="chat-send" class="btn">Send</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>About CampusBites</h4>
+        <p>CampusBites modernizes canteen ordering for students. Built with Firebase Firestore for realtime updates.</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p>Email: kapilsolanki971942@gmail.com</p>
+        <div class="social">
+          <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© CampusBites</div>
+  </footer>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/chatbot.js"></script>
+  <script type="module" src="js/admin.js"></script>
+  <script type="module" src="js/custom.js"></script>
+</body>
+</html>
